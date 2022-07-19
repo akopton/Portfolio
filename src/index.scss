@@ -1,0 +1,19 @@
+@import './styles/_app';
+@import './styles/_hamburger';
+@import './styles/_topnav';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body { 
+    height: 100%;
+    width: 100%;
+}
