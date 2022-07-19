@@ -10,7 +10,9 @@ class TopNav extends React.Component {
     render() {
         return (
             <div className="nav__top">
-                <h1>Welcome!</h1>
+                <h1 onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+                    Welcome!
+                </h1>
                 <Hamburger />
             </div>
         )
