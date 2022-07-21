@@ -1,12 +1,23 @@
+$primaryFont: #fff;
+$primaryColor: rgb(0, 183, 255);
+$primaryColorHover: rgba(0, 100, 225, 1);
+$bgColor: rgba(#3d3d3d, 0.8);
 @import './styles/_app';
-@import './styles/_hamburger';
-@import './styles/_topnav';
+@import './styles/_nav';
+@import './styles/_header';
+@import './styles/_about';
+@import './styles/_skills';
+@import './styles/_experience';
+@import './styles/_github';
+@import './styles/_contact';
+@import './styles/_footer';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 ul {
@@ -18,8 +29,96 @@ a {
     color: inherit;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body { 
     height: 100%;
     width: 100%;
+    background-color: $bgColor;
+    color: $primaryFont;
+    font-family: 'Roboto Mono', monospace;
+}
+
+section {
+    padding-top: 60px;
+}
+
+.btn {
+    display: block;
+    padding: 8px 12px;
+    width: max-content;
+    font-weight: 700;
+    font-size: 1.2em;
+    background-color: $primaryColor;
+    border: 1px solid $primaryColor;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transition: all .3s ease-in-out;
+        background: none;
+        color: $primaryColor;
+    }
+}
+
+.btn--inverted {
+    display: block;
+    padding: 8px 12px;
+    width: max-content;
+    color: $primaryColor;
+    font-weight: 700;
+    font-size: 1.2em;
+    background: none;
+    border: 1px solid $primaryColor;
+    border-radius: 8px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transition: all .3s ease-in-out;
+        background-color: $primaryColor;
+        color: $primaryFont;
+    }
+}
+
+
+.container--flex {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+    }
+}
+
+
+h1 {
+    font-size: 32px;
+
+    @media screen and (min-width: 570px) {
+        font-size: 40px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+}
+
+h2 { 
+    font-size: 30px;
+
+    @media screen and (min-width: 570px) {
+        font-size: 38px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 46px;
+    }
 }
