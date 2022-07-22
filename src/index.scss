@@ -113,6 +113,9 @@ h1 {
 
 h2 { 
     font-size: 30px;
+    margin: 30px auto;
+    width: max-content;
+    text-align: center;
 
     @media screen and (min-width: 570px) {
         font-size: 38px;

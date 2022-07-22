@@ -16,8 +16,7 @@ const About = () => {
                     </div>
                     <p>
                         My story started 2 years ago when I went to College for the Computer Science.  
-                    </p>
-                    <p>
+                    <br></br>
                     <br></br>
                         I was learning there languages like C# or C++, but it inspired me to go my own way, and then I started to learn Front-end technologies overtime.
                     </p>

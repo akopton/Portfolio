@@ -27,6 +27,10 @@
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 50%;
+            animation: movein 1s;
+            position: relative;
+            z-index: -1;
+
 
             @media screen and (min-width: 1024px) {
                 height: 350px;
@@ -38,6 +42,8 @@
         .about__content {
             max-width: 450px;
             text-align: center;
+
+            
             .content__buttons-wrap {
                 margin-top: 30px;
                 display:flex;
@@ -57,3 +63,17 @@
         }
     }
 }
+
+
+
+// Animations
+
+@keyframes movein {
+    0% {
+        transform: translateX(-200%) rotate(-360deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+};
+

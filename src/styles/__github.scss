@@ -1,0 +1,161 @@
+.github__wrap {
+    max-width: 100%;
+    text-align: center;
+    @media screen and (min-width: 360px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    .projects__carousel {
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        overflow: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+
+        @media screen and (max-width: 499px) {
+            padding-left: calc(((100vw - 320px)/2) - 20px);
+            padding-right: calc(((100vw - 320px)/2) - 20px);
+        }
+
+        @media screen and (min-width: 1024px) {
+            gap: 30px;
+        }
+
+        .projects__card {
+            display: flex;
+            padding: 15px;
+            min-height: 350px;
+            min-width: 320px;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            border-radius: 2rem;
+            position: relative;
+            z-index: -2;
+
+            svg {
+                height: 300px;
+                width: 300px;
+                opacity: 1;
+                z-index: -1;
+                transition: opacity 1s ease;
+            }
+
+            &.--react {
+                
+                path,g {
+                    fill: #61dafb;
+                }
+            }
+
+            @media screen and (min-width: 1400px) {
+                p {
+                    opacity: 0;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    transition: opacity 1s ease;
+                }
+    
+                &:hover {
+                    svg {
+                        opacity: 0.3;
+                        transition: opacity 1s ease;
+                    }
+                    p {
+                        opacity: 1;
+                        transition: opacity 1s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .swipe {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        @media screen and (min-width: 1400px) {
+            display: none;
+        }
+
+        .swipe__arrow {
+            display: flex;
+            align-items: center;
+            animation: arrow 1s infinite;
+
+            .arrow__body {
+                height: 4px;
+                width: 40px;
+                background-color: $primaryColor;
+                border-radius: 3px;
+            }
+    
+            .arrow__head {
+                .head__part {
+                    height: 4px;
+                    width: 20px;
+                    background-color: $primaryColor;
+                    border-radius: 3px;
+    
+                    &.--top {
+                        transform: translateY(-2.5px) rotate(30deg);
+                    }
+        
+                    &.--bottom {
+                        transform: translateY(2.5px) rotate(-30deg);
+                    }
+                }
+            }
+        }
+        
+        .swipe__text {
+            margin-top: 10px;
+            text-align: right;
+        }
+    }
+}
+
+// Animations
+
+@keyframes arrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% { 
+        transform: translateX(1px);
+    }
+
+    40% { 
+        transform: translateX(2px);
+    }
+
+    60% { 
+        transform: translateX(3px);
+    }
+
+    80% { 
+        transform: translateX(2px);
+    }
+
+    100% { 
+        transform: translateX(1px);
+    }
+}
+
+@keyframes card {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

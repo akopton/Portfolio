@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
 }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 670px) {
   .nav .nav__hamburger {
     display: none;
   }
@@ -38,16 +38,18 @@
   height: 0;
   width: 100vw;
   position: fixed;
-  top: 60px;
+  top: 0px;
   left: 0;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   color: #fff;
+  z-index: -1;
 }
 @media screen and (max-width: 1024px) {
   .nav .nav__menu {
     background-color: rgba(211, 211, 211, 0.5);
     -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
   }
 }
 .nav .nav__menu ul {
@@ -88,12 +90,12 @@
   width: 100%;
   transition: width 0.3s ease;
 }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 670px) {
   .nav .nav__menu {
     background: none;
     position: inherit;
     height: 100%;
-    width: 320px;
+    width: 500px;
   }
   .nav .nav__menu ul {
     width: 100%;
@@ -111,7 +113,7 @@
 }
 .nav.opened .nav__menu {
   transition: all 0.3s ease-in-out;
-  height: calc(100vh - 50px);
+  height: 100vh;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
@@ -141,7 +143,7 @@
   justify-content: space-between;
   background-color: rgba(211, 211, 211, 0.5);
 }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 670px) {
   .nav__top {
     justify-content: center;
     gap: 50px;
@@ -199,6 +201,10 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
+  -webkit-animation: movein 1s;
+          animation: movein 1s;
+  position: relative;
+  z-index: -1;
 }
 @media screen and (min-width: 1024px) {
   .about__wrap .container--flex .about__main-photo {
@@ -230,6 +236,385 @@
   }
 }
 
+@-webkit-keyframes movein {
+  0% {
+    transform: translateX(-200%) rotate(-360deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes movein {
+  0% {
+    transform: translateX(-200%) rotate(-360deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+.skills__wrap {
+  max-width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 360px) {
+  .skills__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+.skills__wrap .skills__carousel {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+@media screen and (max-width: 499px) {
+  .skills__wrap .skills__carousel {
+    padding-left: calc((100vw - 320px) / 2 - 20px);
+    padding-right: calc((100vw - 320px) / 2 - 20px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .skills__wrap .skills__carousel {
+    gap: 30px;
+  }
+}
+.skills__wrap .skills__carousel .skills__card {
+  display: flex;
+  padding: 15px;
+  min-height: 350px;
+  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-radius: 2rem;
+  position: relative;
+  z-index: -2;
+}
+.skills__wrap .skills__carousel .skills__card svg {
+  height: 300px;
+  width: 300px;
+  opacity: 1;
+  z-index: -1;
+  transition: opacity 1s ease;
+}
+.skills__wrap .skills__carousel .skills__card.--react path, .skills__wrap .skills__carousel .skills__card.--react g {
+  fill: #61dafb;
+}
+@media screen and (min-width: 1400px) {
+  .skills__wrap .skills__carousel .skills__card p {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease;
+  }
+  .skills__wrap .skills__carousel .skills__card:hover svg {
+    opacity: 0.3;
+    transition: opacity 1s ease;
+  }
+  .skills__wrap .skills__carousel .skills__card:hover p {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+}
+.skills__wrap .swipe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1400px) {
+  .skills__wrap .swipe {
+    display: none;
+  }
+}
+.skills__wrap .swipe .swipe__arrow {
+  display: flex;
+  align-items: center;
+  -webkit-animation: arrow 1s infinite;
+          animation: arrow 1s infinite;
+}
+.skills__wrap .swipe .swipe__arrow .arrow__body {
+  height: 4px;
+  width: 40px;
+  background-color: rgb(0, 183, 255);
+  border-radius: 3px;
+}
+.skills__wrap .swipe .swipe__arrow .arrow__head .head__part {
+  height: 4px;
+  width: 20px;
+  background-color: rgb(0, 183, 255);
+  border-radius: 3px;
+}
+.skills__wrap .swipe .swipe__arrow .arrow__head .head__part.--top {
+  transform: translateY(-2.5px) rotate(30deg);
+}
+.skills__wrap .swipe .swipe__arrow .arrow__head .head__part.--bottom {
+  transform: translateY(2.5px) rotate(-30deg);
+}
+.skills__wrap .swipe .swipe__text {
+  margin-top: 10px;
+  text-align: right;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(1px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(1px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+@-webkit-keyframes card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.experience__wrap {
+  max-width: 100%;
+}
+@media screen and (min-width: 360px) {
+  .experience__wrap {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+.experience__wrap .experience__main-text, .experience__wrap .experience__aside-text {
+  text-align: center;
+}
+.experience__wrap .experience__aside-text {
+  margin-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .experience__wrap .experience {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+  }
+  .experience__wrap .experience__main-text {
+    text-align: right;
+  }
+  .experience__wrap .experience__aside-text {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 660px) {
+  .experience__wrap .experience .text-wrap {
+    font-size: 22px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .experience__wrap .experience .text-wrap {
+    min-height: 210px;
+  }
+}
+.experience__wrap h3 {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 22px;
+  color: rgb(0, 183, 255);
+}
+@media screen and (max-width: 1076px) {
+  .experience__wrap h3 {
+    margin-top: 20px;
+  }
+}
+
+.github__wrap {
+  max-width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 360px) {
+  .github__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+  }
+}
+.github__wrap .projects__carousel {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+@media screen and (max-width: 499px) {
+  .github__wrap .projects__carousel {
+    padding-left: calc((100vw - 320px) / 2 - 20px);
+    padding-right: calc((100vw - 320px) / 2 - 20px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .github__wrap .projects__carousel {
+    gap: 30px;
+  }
+}
+.github__wrap .projects__carousel .projects__card {
+  display: flex;
+  padding: 15px;
+  min-height: 350px;
+  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-radius: 2rem;
+  position: relative;
+  z-index: -2;
+}
+.github__wrap .projects__carousel .projects__card svg {
+  height: 300px;
+  width: 300px;
+  opacity: 1;
+  z-index: -1;
+  transition: opacity 1s ease;
+}
+.github__wrap .projects__carousel .projects__card.--react path, .github__wrap .projects__carousel .projects__card.--react g {
+  fill: #61dafb;
+}
+@media screen and (min-width: 1400px) {
+  .github__wrap .projects__carousel .projects__card p {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease;
+  }
+  .github__wrap .projects__carousel .projects__card:hover svg {
+    opacity: 0.3;
+    transition: opacity 1s ease;
+  }
+  .github__wrap .projects__carousel .projects__card:hover p {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+}
+.github__wrap .swipe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1400px) {
+  .github__wrap .swipe {
+    display: none;
+  }
+}
+.github__wrap .swipe .swipe__arrow {
+  display: flex;
+  align-items: center;
+  -webkit-animation: arrow 1s infinite;
+          animation: arrow 1s infinite;
+}
+.github__wrap .swipe .swipe__arrow .arrow__body {
+  height: 4px;
+  width: 40px;
+  background-color: rgb(0, 183, 255);
+  border-radius: 3px;
+}
+.github__wrap .swipe .swipe__arrow .arrow__head .head__part {
+  height: 4px;
+  width: 20px;
+  background-color: rgb(0, 183, 255);
+  border-radius: 3px;
+}
+.github__wrap .swipe .swipe__arrow .arrow__head .head__part.--top {
+  transform: translateY(-2.5px) rotate(30deg);
+}
+.github__wrap .swipe .swipe__arrow .arrow__head .head__part.--bottom {
+  transform: translateY(2.5px) rotate(-30deg);
+}
+.github__wrap .swipe .swipe__text {
+  margin-top: 10px;
+  text-align: right;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(1px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(1px);
+  }
+}
+@keyframes card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -332,6 +717,11 @@ h1 {
 
 h2 {
   font-size: 30px;
+  margin: 30px auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
 }
 @media screen and (min-width: 570px) {
   h2 {

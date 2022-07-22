@@ -1,12 +1,58 @@
 import React from "react";
 
 class Github extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {}
+    }
+
+
 
     render() {
         return (
-            <div>
-
+            <section id="github" className="github__wrap">
+            <h2>My projects</h2>
+            <div className="projects__carousel">
+                <div className="projects__card --calculator">
+                    <h3>Project title</h3>
+                    <p>website link</p>
+                    <div>Project preview</div>
+                    <p>Technologies used</p>
+                    <p>Github link</p>
+                </div>
+                <div className="projects__card --todoList">
+                    <h3>Project title</h3>
+                    <p>website link</p>
+                    <div>Project preview</div>
+                    <p>Technologies used</p>
+                    <p>Github link</p>
+                </div>
+                <div className="projects__card --contactForm">
+                    <h3>Project title</h3>
+                    <p>website link</p>
+                    <div>Project preview</div>
+                    <p>Technologies used</p>
+                    <p>Github link</p>
+                </div>
+                <div className="projects__card --notes">
+                    <h3>Project title</h3>
+                    <p>website link</p>
+                    <div>Project preview</div>
+                    <p>Technologies used</p>
+                    <p>Github link</p>
+                </div>
             </div>
+            <div className="swipe">
+                <div className="swipe__arrow">
+                    <div className="arrow__body"></div>
+                    <div className="arrow__head">
+                        <div className="head__part --top"></div>
+                        <div className="head__part --bottom"></div>
+                    </div>
+                </div>
+                <p className="swipe__text">Swipe to see more!</p>
+            </div>
+        </section>
         )
     }
 }

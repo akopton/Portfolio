@@ -1,0 +1,55 @@
+.experience__wrap {
+    max-width: 100%;
+    
+    @media screen and (min-width: 360px) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .experience {
+        &__main-text, &__aside-text {
+            text-align: center;
+        }
+
+        &__aside-text {
+            margin-top: 20px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 30px;
+
+            &__main-text {
+                text-align: right;
+            }
+
+            &__aside-text {
+                text-align: left;
+                margin-top: 0;
+            }
+        }
+        .text-wrap {
+    
+            @media screen and (min-width: 660px) {
+                font-size: 22px;
+                width: 100%;
+            }
+
+            @media screen and (min-width: 1024px) {
+                min-height: 210px;
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 22px;
+        color: $primaryColor;
+        
+        @media screen and (max-width: 1076px) {
+            margin-top: 20px;
+        }
+    }
+}
