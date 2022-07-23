@@ -11,16 +11,20 @@ const Experience = () => {
                         I'm during my 3-month internship as<br></br>
                         Front-End Developer at ARRIS AGENCY<br></br>
                         ending on 12.08.2022r.
+
+                        <span className="desktop">
+                            You can check my projects below on GitHub section!
+                        </span>
                     </p>
                 </div>
                 <div className="text-wrap experience__aside-text">
                     <p>
-                        In current work I'm working with HTML, CSS and pure JavaScript.
-                        <br></br>Besides that I'm learning at home for my own, all of the 3 previous technologies and additionally started with React which I really liked!
+                        In current work I'm working with HTML, CSS and pure JavaScript. Also I have opportunity to work together with UI/UX designers.<br></br>
+                        <br></br>Besides that I'm learning at home for my own, all of the 3 previous technologies, and additionally started with React which I really liked!
                     </p>
                 </div>
             </div>
-            <h3>
+            <h3 className="mobile">
                 You can check my projects below on GitHub section!
             </h3>
         </section>

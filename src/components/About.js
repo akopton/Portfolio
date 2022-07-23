@@ -11,9 +11,6 @@ const About = () => {
                 <div className="about__main-photo">
                 </div>
                 <div className="about__content">
-                    <div className="">
-
-                    </div>
                     <p>
                         My story started 2 years ago when I went to College for the Computer Science.  
                     <br></br>
@@ -22,7 +19,7 @@ const About = () => {
                     </p>
                     <div className="content__buttons-wrap">
                         <a href={CV} download  className="btn--inverted">Download CV</a>
-                        <a href="#" className="btn">Let's Talk</a>
+                        <a href="#contact" className="btn">Let's Talk</a>
                     </div>                    
                 </div>
             </div>

@@ -18,11 +18,13 @@ class Nav extends React.Component {
                 isOpened: true,
                 classList: this.state.classList.concat('opened')
             })
+            document.body.style.overflow = "hidden"
         } else {
             this.setState({
                 isOpened: false,
                 classList: this.state.classList.filter(el => el !== 'opened')
             })
+            document.body.style.overflow = "auto"
         }
     }
 

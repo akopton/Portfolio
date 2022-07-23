@@ -9,6 +9,10 @@
     .experience {
         &__main-text, &__aside-text {
             text-align: center;
+            .desktop {
+                display: none;
+            }
+            
         }
 
         &__aside-text {
@@ -23,6 +27,14 @@
 
             &__main-text {
                 text-align: right;
+                
+                .desktop {
+                    display: block;
+                    margin-top: 30px;
+                    color: $primaryColor;
+                    font-weight: 600;
+                    text-align: right;
+                }
             }
 
             &__aside-text {
@@ -50,6 +62,14 @@
         
         @media screen and (max-width: 1076px) {
             margin-top: 20px;
+        }
+    }
+
+    .mobile {
+        display: block;
+        
+        @media screen and (min-width: 1024px) {
+            display: none;
         }
     }
 }

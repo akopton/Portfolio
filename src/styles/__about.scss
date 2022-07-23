@@ -1,5 +1,7 @@
 .about__wrap {
     width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
 
     .about__name {
         margin: 0 auto 30px auto;
@@ -42,7 +44,6 @@
         .about__content {
             max-width: 450px;
             text-align: center;
-
             
             .content__buttons-wrap {
                 margin-top: 30px;
@@ -68,12 +69,12 @@
 
 // Animations
 
-@keyframes movein {
-    0% {
-        transform: translateX(-200%) rotate(-360deg);
-    }
-    100% {
-        transform: translateX(0) rotate(0);
-    }
-};
+// @keyframes movein {
+//     0% {
+//         transform: translateX(-200%);
+//     }
+//     100% {
+//         transform: translateX(0);
+//     }
+// };
 
