@@ -39,23 +39,33 @@ const Contact = () => {
 
     return (
         <section id="contact" className="contact__wrap">
-            <h3></h3>
+            <div className="contact__socials">
+                <h3>Contact me!</h3>
+                <p>Send me email or...</p>
+                <div className="icons">
+                    <a href="https://www.linkedin.com/in/aleksander-kopto%C5%84-657088201/" target='_blank'><FaLinkedin className="linkedin-icon icon"/></a>
+                    <a href="https://github.com/akopton" target='_blank'><FaGithub className="github-icon icon"/></a>
+                </div>
+            </div>
             <form className="contact__form">
                 <input
                     className="text-input"
                     type="text"
+                    placeholder="Name"
                     value={name}
                     onChange={e => setName(e.target.value)}
                 />
                 <input
                     className="text-input"
                     type="email"
+                    placeholder="Email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
                 <textarea 
-                    className="text-input"
+                    className="text-input --message"
                     type="text"
+                    placeholder="Write your message..."
                     value={message}
                     onChange={e => setMessage(e.target.value)}
                 />
@@ -67,10 +77,7 @@ const Contact = () => {
                 />
                 <span className={emailSent ? 'visible' : 'hidden'}>Thank you for your message!<br></br> We will be in touch!</span>
             </form>
-            <div className="icons">
-                <a href="https://www.linkedin.com/in/aleksander-kopto%C5%84-657088201/" target='_blank'><FaLinkedin className="linkedin-icon"/></a>
-                <a href="https://github.com/akopton" target='_blank'><FaGithub className="github-icon"/></a>
-            </div>
+            
         </section>
     )
 }

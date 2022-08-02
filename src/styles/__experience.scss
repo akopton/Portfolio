@@ -24,7 +24,7 @@
             align-items: center;
             justify-content: space-around;
             gap: 30px;
-
+            padding: 0 calc((100vw - 1500px)/2);
             &__main-text {
                 text-align: right;
                 

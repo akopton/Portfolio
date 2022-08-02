@@ -19,7 +19,7 @@ const Experience = () => {
                 </div>
                 <div className="text-wrap experience__aside-text">
                     <p>
-                        In current work I'm working with HTML, CSS and pure JavaScript. Also I have opportunity to work together with UI/UX designers.<br></br>
+                        In current work I'm working with HTML, CSS, pure JavaScript and Git with GitLab. Also I have opportunity to work together with UI/UX designers.<br></br>
                         <br></br>Besides that I'm learning at home for my own, all of the 3 previous technologies, and additionally started with React which I really liked!
                     </p>
                 </div>

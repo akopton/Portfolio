@@ -7,17 +7,16 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        position: relative;
         
         .text-input {
             padding: 5px 10px;
             width: 100%;
+            max-width: 400px;
             font-size: 20px;
             background: none;
             border: 1px solid $primaryColor;
-            color: $primaryColor;
-        }
-        
-        .text-input:focus {
+            color: #fff;
         }
 
         textarea {
@@ -26,34 +25,104 @@
         }
 
         .submit-btn {
-            padding: 5px 10px;
-            width: 100%;
-            font-size: 20px;
+            padding: 8px 12px;
+            font-size: 18px;
             font-weight: 600;
+
+            @media screen and (min-width: 1024px) {
+                padding: 10px 15px;
+                font-size: 20px;
+                align-self: flex-end;
+
+            }            
         }
     }
 
-    .icons {
-        .linkedin-icon {
+    .contact__socials {
+        text-align: center;
+
+        .icons {
+            padding: 0 50px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+    
+            .linkedin-icon {
+                transition: transform .3s ease;
+                &:hover {
+                        color: #0e76a8;
+                        transform: scale(1.5);
+                        transition: transform .3s ease;
+                }
+            }
+    
+            .github-icon {
+                transition: transform .3s ease;
+                &:hover {
+                    color: #171515;
+                    transform: scale(1.5);
+                    transition: transform .3s ease;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+
+        .contact__socials {
+            text-align: center;
+            
+            h3 {
+                font-size: 45px;
+            }
+            
+            .icons {
+                font-size: 50px;
+                gap: 30px;
+                margin-top: 30px;
+
+            }
+        }
+        
+
+        .contact__form {
+            padding: 0;
+            height: 350px;
+            width: 400px;
+            
+            .text-input {
+                max-width: 100%;
+                padding: 10px 15px;
+            }
+
+            textarea {
+                height: 200px;
+            }
+
         }
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .visible {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;    
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(50, 50, 50, .5);
+    height: 104%;
+    width: 104%;
+    transform: translate(-2%, -2%);
 }
 
 .hidden {

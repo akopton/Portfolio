@@ -286,6 +286,7 @@
   gap: 5px;
   position: relative;
   z-index: 0;
+  cursor: default;
 }
 .skills__wrap .skills__carousel .skills__card svg {
   height: 300px;
@@ -435,6 +436,7 @@
     align-items: center;
     justify-content: space-around;
     gap: 30px;
+    padding: 0 calc((100vw - 1500px) / 2);
   }
   .experience__wrap .experience__main-text {
     text-align: right;
@@ -529,15 +531,13 @@
   cursor: pointer;
   color: rgb(0, 183, 255);
 }
-.github__wrap .projects__carousel .projects__card svg {
-  height: 300px;
-  width: 300px;
-  opacity: 1;
-  z-index: -1;
-  transition: opacity 1s ease;
+.github__wrap .projects__carousel .projects__card .preview-image {
+  width: 279px;
+  height: 257px;
 }
-.github__wrap .projects__carousel .projects__card.--react path, .github__wrap .projects__carousel .projects__card.--react g {
-  fill: #61dafb;
+.github__wrap .projects__carousel .projects__card .preview-image img {
+  height: 100%;
+  width: 100%;
 }
 .github__wrap .swipe {
   display: flex;
@@ -615,31 +615,125 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 .contact__wrap .contact__form .text-input {
   padding: 5px 10px;
   width: 100%;
+  max-width: 400px;
   font-size: 20px;
   background: none;
   border: 1px solid rgb(0, 183, 255);
-  color: rgb(0, 183, 255);
+  color: #fff;
 }
 .contact__wrap .contact__form textarea {
   height: 150px;
   width: 100%;
 }
 .contact__wrap .contact__form .submit-btn {
-  padding: 5px 10px;
-  width: 100%;
-  font-size: 20px;
+  padding: 8px 12px;
+  font-size: 18px;
   font-weight: 600;
 }
+@media screen and (min-width: 1024px) {
+  .contact__wrap .contact__form .submit-btn {
+    padding: 10px 15px;
+    font-size: 20px;
+    align-self: flex-end;
+  }
+}
+.contact__wrap .contact__socials {
+  text-align: center;
+}
+.contact__wrap .contact__socials .icons {
+  padding: 0 50px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact__wrap .contact__socials .icons .linkedin-icon {
+  transition: transform 0.3s ease;
+}
+.contact__wrap .contact__socials .icons .linkedin-icon:hover {
+  color: #0e76a8;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+.contact__wrap .contact__socials .icons .github-icon {
+  transition: transform 0.3s ease;
+}
+.contact__wrap .contact__socials .icons .github-icon:hover {
+  color: #171515;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+@media screen and (min-width: 1024px) {
+  .contact__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+  }
+  .contact__wrap .contact__socials {
+    text-align: center;
+  }
+  .contact__wrap .contact__socials h3 {
+    font-size: 45px;
+  }
+  .contact__wrap .contact__socials .icons {
+    font-size: 50px;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .contact__wrap .contact__form {
+    padding: 0;
+    height: 350px;
+    width: 400px;
+  }
+  .contact__wrap .contact__form .text-input {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+  .contact__wrap .contact__form textarea {
+    height: 200px;
+  }
+}
+
 .visible {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+  height: 104%;
+  width: 104%;
+  transform: translate(-2%, -2%);
 }
 
 .hidden {
   display: none;
+}
+
+.footer__wrap {
+  padding: 20px 35px;
+  text-align: center;
+}
+.footer__wrap span {
+  display: block;
+  margin-top: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .footer__wrap {
+    padding: 50px 250px;
+    font-size: 20px;
+  }
 }
 
 * {

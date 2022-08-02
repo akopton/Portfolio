@@ -43,20 +43,29 @@
                 }
             }
 
-            svg {
-                height: 300px;
-                width: 300px;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 1s ease;
-            }
-
-            &.--react {
+            .preview-image {
+                width: 279px;
+                height: 257px;
                 
-                path,g {
-                    fill: #61dafb;
+                img {
+                    height: 100%;
+                    width: 100%;
                 }
             }
+            // svg {
+            //     height: 300px;
+            //     width: 300px;
+            //     opacity: 1;
+            //     z-index: -1;
+            //     transition: opacity 1s ease;
+            // }
+
+            // &.--react {
+                
+            //     path,g {
+            //         fill: #61dafb;
+            //     }
+            // }
 
             // @media screen and (min-width: 1400px) {
             //     p {

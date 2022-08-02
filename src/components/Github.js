@@ -1,4 +1,5 @@
 import React from "react";
+import projects from "./projects";
 
 class Github extends React.Component {
     constructor(props) {
@@ -19,7 +20,17 @@ class Github extends React.Component {
             <h2>My projects</h2>
 
             <div className="projects__carousel">
-                <div className="projects__card --calculator">
+                {[...projects].map(project => {
+                    return (
+                        <div className="projects__card">
+                            <h3><a href={project.title} target="_blank">Todo List</a></h3>
+                            <div className="preview-image"><img src={project.preview}></img></div>
+                            <p>{project.technologies}</p>
+                            <p><a href={project.repo} target="_blank">GitHub Link</a></p>
+                        </div>
+                    )
+                })}
+                {/* <div className="projects__card --calculator">
                     <h3><a></a></h3>
                     <p>website link</p>
                     <div>Project preview</div>
@@ -43,7 +54,7 @@ class Github extends React.Component {
                     <div>Project preview</div>
                     <p>Technologies used</p>
                     <p>Github link</p>
-                </div>
+                </div> */}
             </div>
             <div className="swipe">
                 <div className="swipe__arrow">
