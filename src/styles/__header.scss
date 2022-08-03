@@ -8,9 +8,8 @@
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(lightgrey, .5);
+    background-color: rgba(lightgrey, .95);
     z-index: 20;
-    // backdrop-filter: blur(4px);
     
     @media screen and (min-width: 670px) {
         justify-content: center;

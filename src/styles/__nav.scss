@@ -45,7 +45,9 @@
         color: $primaryFont;
         z-index: -1;
 
-        //! not working for firefox
+
+        
+
         @media screen and (max-width: 1024px) {
             background-color: rgba(lightgrey, .5);
             backdrop-filter: blur(4px);
@@ -120,6 +122,9 @@
             transition: all .3s ease-in-out;
             height: 100%;
             backdrop-filter: blur(20px);
+            @media screen and (max-width: 669px) {
+                padding-top: 100px;
+            }
         }
 
         .nav__hamburger {

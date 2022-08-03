@@ -121,6 +121,11 @@
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
 }
+@media screen and (max-width: 669px) {
+  .nav.opened .nav__menu {
+    padding-top: 100px;
+  }
+}
 .nav.opened .nav__hamburger .hamburger__top {
   transform: translateY(450%) rotate(-45deg);
   transition: transform 0.15s ease-in-out;
@@ -145,7 +150,7 @@
   height: 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(211, 211, 211, 0.5);
+  background-color: rgba(211, 211, 211, 0.95);
   z-index: 20;
 }
 @media screen and (min-width: 670px) {
@@ -535,7 +540,8 @@
   width: 279px;
   height: 277px;
   border: 2px solid rgb(0, 183, 255);
-  border-radius: 4px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .github__wrap .projects__carousel .projects__card .preview-image img {
   height: 100%;
@@ -545,7 +551,8 @@
   width: 279px;
   height: 277px;
   border: 2px solid rgb(0, 183, 255);
-  border-radius: 4px;
+  border-radius: 8px;
+  overflow: hidden;
   position: relative;
   background-color: rgba(50, 50, 50, 0.5);
 }
@@ -563,7 +570,8 @@
   width: 279px;
   height: 277px;
   border: 2px solid rgb(0, 183, 255);
-  border-radius: 4px;
+  border-radius: 8px;
+  overflow: hidden;
   position: relative;
 }
 .github__wrap .projects__carousel .projects__card .preview-in-progress img {
