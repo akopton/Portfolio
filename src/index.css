@@ -533,11 +533,56 @@
 }
 .github__wrap .projects__carousel .projects__card .preview-image {
   width: 279px;
-  height: 257px;
+  height: 277px;
+  border: 2px solid rgb(0, 183, 255);
+  border-radius: 4px;
 }
 .github__wrap .projects__carousel .projects__card .preview-image img {
   height: 100%;
   width: 100%;
+}
+.github__wrap .projects__carousel .projects__card .preview-coming-soon {
+  width: 279px;
+  height: 277px;
+  border: 2px solid rgb(0, 183, 255);
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba(50, 50, 50, 0.5);
+}
+.github__wrap .projects__carousel .projects__card .preview-coming-soon::after {
+  content: "Coming soon!";
+  white-space: nowrap;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.github__wrap .projects__carousel .projects__card .preview-in-progress {
+  width: 279px;
+  height: 277px;
+  border: 2px solid rgb(0, 183, 255);
+  border-radius: 4px;
+  position: relative;
+}
+.github__wrap .projects__carousel .projects__card .preview-in-progress img {
+  height: 100%;
+  width: 100%;
+}
+.github__wrap .projects__carousel .projects__card .preview-in-progress::after {
+  content: "In progress";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(50, 50, 50, 0.7);
 }
 .github__wrap .swipe {
   display: flex;

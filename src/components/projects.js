@@ -1,16 +1,28 @@
 const projects = [
     {
-        title: 'https://akopton.github.io/Todo-list',
-        preview: '',
-        technologies: [],
-        repo: ''
+        title: 'Todo List',
+        link: 'https://akopton.github.io/Todo-list',
+        preview: require('../images/todo-list.png'),
+        technologies: ['ReactJS'],
     },
     {
-        title: 'https://akopton.github.io/Todo-list',
+        title: 'Calculator',
+        link: 'https://akopton.github.io/Calculator',
         preview: require('../images/calculator.png'),
-        technologies: ['HTML, CSS, JavaScript'],
-        repo: ''
+        technologies: ['HTML, SCSS, JavaScript'],
     },
+    {
+        title: 'Contact Form',
+        link: '#',
+        preview: require('../images/contact-form.png'),
+        technologies: ['HTML, SCSS, JavaScript'],
+    },
+    {
+        title: 'Notes App',
+        link: '#',
+        preview: '',
+        technologies: ['ReactJS'],
+    }
 ]
 
 export default projects;

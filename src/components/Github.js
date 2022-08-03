@@ -23,38 +23,12 @@ class Github extends React.Component {
                 {[...projects].map(project => {
                     return (
                         <div className="projects__card">
-                            <h3><a href={project.title} target="_blank">Todo List</a></h3>
-                            <div className="preview-image"><img src={project.preview}></img></div>
+                            <h3><a href={project.link} target={project.link == '#' ? "_self" : "_blank"}>{project.title}</a></h3>
+                            <div className={project.preview == '' ? "preview-coming-soon" : project.link == '#' ? "preview-in-progress" : "preview-image"}><img src={project.preview}></img></div>
                             <p>{project.technologies}</p>
-                            <p><a href={project.repo} target="_blank">GitHub Link</a></p>
                         </div>
                     )
                 })}
-                {/* <div className="projects__card --calculator">
-                    <h3><a></a></h3>
-                    <p>website link</p>
-                    <div>Project preview</div>
-                    <p>Technologies used</p>
-                    <p>Github link</p>
-                </div>
-                <div className="projects__card --todoList">
-                    <h3><a href={this.state.todoList.link} target="_blank">Todo List</a></h3>
-                    <div>Project preview</div>
-                    <p>Technologies used</p>
-                    <p>Github link</p>
-                </div>
-                <div className="projects__card --contactForm">
-                    <h3>Project title</h3>
-                    <div>Project preview</div>
-                    <p>Technologies used</p>
-                    <p>Github link</p>
-                </div>
-                <div className="projects__card --notes">
-                    <h3>Project title</h3>
-                    <div>Project preview</div>
-                    <p>Technologies used</p>
-                    <p>Github link</p>
-                </div> */}
             </div>
             <div className="swipe">
                 <div className="swipe__arrow">
