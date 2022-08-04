@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.528c4372.css",
-    "main.js": "/Portfolio/static/js/main.b4312a8a.js",
+    "main.css": "/Portfolio/static/css/main.466c4d18.css",
+    "main.js": "/Portfolio/static/js/main.581d3e2d.js",
     "static/media/my-photo.jpeg": "/Portfolio/static/media/my-photo.dda1f9881728affa2516.jpeg",
     "static/media/CV_Aleksander_Koptoń_EN.pdf": "/Portfolio/static/media/CV_Aleksander_Koptoń_EN.476df8a00b6ccca25097.pdf",
     "static/media/todo-list.png": "/Portfolio/static/media/todo-list.5a106263378ab5075fcb.png",
     "static/media/contact-form.png": "/Portfolio/static/media/contact-form.5e82ebfe2ba36623b2d0.png",
     "static/media/calculator.png": "/Portfolio/static/media/calculator.ef188a1117449968aefe.png",
     "index.html": "/Portfolio/index.html",
-    "main.528c4372.css.map": "/Portfolio/static/css/main.528c4372.css.map",
-    "main.b4312a8a.js.map": "/Portfolio/static/js/main.b4312a8a.js.map"
+    "main.466c4d18.css.map": "/Portfolio/static/css/main.466c4d18.css.map",
+    "main.581d3e2d.js.map": "/Portfolio/static/js/main.581d3e2d.js.map"
   },
   "entrypoints": [
-    "static/css/main.528c4372.css",
-    "static/js/main.b4312a8a.js"
+    "static/css/main.466c4d18.css",
+    "static/js/main.581d3e2d.js"
   ]
 }
