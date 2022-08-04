@@ -22,10 +22,12 @@ class Github extends React.Component {
             <div className="projects__carousel">
                 {[...projects].map(project => {
                     return (
-                        <div className="projects__card">
+                        <div className="card__wrap">
                             <h3><a href={project.link} target={project.link === '#' ? "_self" : "_blank"}>{project.title}</a></h3>
-                            <div className={project.preview === '' ? "preview-coming-soon" : project.link === '#' ? "preview-in-progress" : "preview-image"}><img src={project.preview}></img></div>
-                            <p>{project.technologies}</p>
+                            <div className="projects__card">
+                                <div className={project.preview === '' ? "preview-coming-soon" : project.link === '#' ? "preview-in-progress" : "preview-image"}><img src={project.preview}></img></div>
+                                <p>{project.technologies}</p>
+                            </div>
                         </div>
                     )
                 })}

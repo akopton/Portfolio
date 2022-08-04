@@ -522,9 +522,20 @@
     gap: 30px;
   }
 }
-.github__wrap .projects__carousel .projects__card {
+.github__wrap .projects__carousel .card__wrap h3 {
+  font-size: 25px;
+}
+.github__wrap .projects__carousel .card__wrap a {
+  cursor: pointer;
+  color: rgb(0, 183, 255);
+  text-decoration: underline;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+}
+.github__wrap .projects__carousel .card__wrap .projects__card {
   display: flex;
   padding: 15px;
+  padding-bottom: 50px;
   min-height: 350px;
   min-width: 320px;
   flex-direction: column;
@@ -532,31 +543,47 @@
   gap: 5px;
   position: relative;
 }
-.github__wrap .projects__carousel .projects__card a {
-  cursor: pointer;
-  color: rgb(0, 183, 255);
+.github__wrap .projects__carousel .card__wrap .projects__card p {
+  font-size: 20px;
+  position: absolute;
+  bottom: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  transition: bottom 0.3s ease;
+  z-index: -1;
 }
-.github__wrap .projects__carousel .projects__card .preview-image {
+.github__wrap .projects__carousel .card__wrap .projects__card:hover .preview-coming-soon, .github__wrap .projects__carousel .card__wrap .projects__card:hover .preview-in-progress, .github__wrap .projects__carousel .card__wrap .projects__card:hover .preview-image {
+  transform: translateY(-30px) scale(1.1);
+  transition: transform 0.3s ease;
+}
+.github__wrap .projects__carousel .card__wrap .projects__card:hover p {
+  bottom: 45px;
+  transition: bottom 0.3s ease;
+}
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-image {
   width: 279px;
   height: 277px;
   border: 2px solid rgb(0, 183, 255);
   border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
-.github__wrap .projects__carousel .projects__card .preview-image img {
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-image img {
   height: 100%;
   width: 100%;
 }
-.github__wrap .projects__carousel .projects__card .preview-coming-soon {
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-coming-soon {
   width: 279px;
   height: 277px;
   border: 2px solid rgb(0, 183, 255);
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgb(50, 50, 50);
+  transition: transform 0.3s ease;
 }
-.github__wrap .projects__carousel .projects__card .preview-coming-soon::after {
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-coming-soon::after {
   content: "Coming soon!";
   white-space: nowrap;
   font-size: 25px;
@@ -566,19 +593,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.github__wrap .projects__carousel .projects__card .preview-in-progress {
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-in-progress {
   width: 279px;
   height: 277px;
   border: 2px solid rgb(0, 183, 255);
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  transition: transform 0.3s ease;
 }
-.github__wrap .projects__carousel .projects__card .preview-in-progress img {
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-in-progress img {
   height: 100%;
   width: 100%;
 }
-.github__wrap .projects__carousel .projects__card .preview-in-progress::after {
+.github__wrap .projects__carousel .card__wrap .projects__card .preview-in-progress::after {
   content: "In progress";
   display: flex;
   align-items: center;
