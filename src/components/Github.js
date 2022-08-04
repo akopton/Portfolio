@@ -23,8 +23,8 @@ class Github extends React.Component {
                 {[...projects].map(project => {
                     return (
                         <div className="projects__card">
-                            <h3><a href={project.link} target={project.link == '#' ? "_self" : "_blank"}>{project.title}</a></h3>
-                            <div className={project.preview == '' ? "preview-coming-soon" : project.link == '#' ? "preview-in-progress" : "preview-image"}><img src={project.preview}></img></div>
+                            <h3><a href={project.link} target={project.link === '#' ? "_self" : "_blank"}>{project.title}</a></h3>
+                            <div className={project.preview === '' ? "preview-coming-soon" : project.link === '#' ? "preview-in-progress" : "preview-image"}><img src={project.preview}></img></div>
                             <p>{project.technologies}</p>
                         </div>
                     )
