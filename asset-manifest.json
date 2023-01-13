@@ -1,18 +1,26 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.466c4d18.css",
-    "main.js": "/Portfolio/static/js/main.581d3e2d.js",
+    "main.css": "/Portfolio/static/css/main.96c06807.css",
+    "main.js": "/Portfolio/static/js/main.193e6701.js",
     "static/media/my-photo.jpeg": "/Portfolio/static/media/my-photo.dda1f9881728affa2516.jpeg",
-    "static/media/CV_Aleksander_Koptoń_EN.pdf": "/Portfolio/static/media/CV_Aleksander_Koptoń_EN.476df8a00b6ccca25097.pdf",
+    "static/media/typing-cat.gif": "/Portfolio/static/media/typing-cat.a92d1fa9deb6345b159d.gif",
     "static/media/todo-list.png": "/Portfolio/static/media/todo-list.5a106263378ab5075fcb.png",
+    "static/media/typescript-logo.png": "/Portfolio/static/media/typescript-logo.52ea0bc40ba11d507e7d.png",
     "static/media/contact-form.png": "/Portfolio/static/media/contact-form.5e82ebfe2ba36623b2d0.png",
     "static/media/calculator.png": "/Portfolio/static/media/calculator.ef188a1117449968aefe.png",
+    "static/media/mongodb-logo.svg": "/Portfolio/static/media/mongodb-logo.fd82554bd307566edfca0c32271a894e.svg",
+    "static/media/nodejs-logo.svg": "/Portfolio/static/media/nodejs-logo.2c61171f4ebbd09de1bee4c9563ac4e8.svg",
+    "static/media/react-2.svg": "/Portfolio/static/media/react-2.e68b35f4774979ae220b1d5d7b345b00.svg",
+    "static/media/git-icon.svg": "/Portfolio/static/media/git-icon.c60b7e5ae8ec2562f23fdddcab300026.svg",
     "index.html": "/Portfolio/index.html",
-    "main.466c4d18.css.map": "/Portfolio/static/css/main.466c4d18.css.map",
-    "main.581d3e2d.js.map": "/Portfolio/static/js/main.581d3e2d.js.map"
+    "static/media/css-3.svg": "/Portfolio/static/media/css-3.4e47c3122b8d2476a02f97dcfcb28640.svg",
+    "static/media/html-1.svg": "/Portfolio/static/media/html-1.f318c8b1d5945fa9adc827ae94849cb1.svg",
+    "static/media/javascript-1.svg": "/Portfolio/static/media/javascript-1.b879f838faf1cb951d1c2230fd933a39.svg",
+    "main.96c06807.css.map": "/Portfolio/static/css/main.96c06807.css.map",
+    "main.193e6701.js.map": "/Portfolio/static/js/main.193e6701.js.map"
   },
   "entrypoints": [
-    "static/css/main.466c4d18.css",
-    "static/js/main.581d3e2d.js"
+    "static/css/main.96c06807.css",
+    "static/js/main.193e6701.js"
   ]
 }
