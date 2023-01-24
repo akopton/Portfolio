@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.17df49eb.css",
-    "main.js": "/Portfolio/static/js/main.e4e8a5f6.js",
+    "main.css": "/Portfolio/static/css/main.a7cbefba.css",
+    "main.js": "/Portfolio/static/js/main.7503f90c.js",
     "static/media/my-photo.jpeg": "/Portfolio/static/media/my-photo.dda1f9881728affa2516.jpeg",
     "static/media/typing-cat.gif": "/Portfolio/static/media/typing-cat.a92d1fa9deb6345b159d.gif",
     "static/media/expired-popup.png": "/Portfolio/static/media/expired-popup.6b9d018fbde58ffb9c5b.png",
+    "static/media/CV_Aleksander_Koptoń_EN.pdf": "/Portfolio/static/media/CV_Aleksander_Koptoń_EN.1fa1ae944445f83c27cc.pdf",
     "static/media/opened-task.png": "/Portfolio/static/media/opened-task.21f6db9b933f0292b8e4.png",
     "static/media/todo-list.png": "/Portfolio/static/media/todo-list.5a106263378ab5075fcb.png",
     "static/media/main-site.png": "/Portfolio/static/media/main-site.2742a7216b36a842526a.png",
@@ -30,11 +31,11 @@
     "static/media/css-3.svg": "/Portfolio/static/media/css-3.4e47c3122b8d2476a02f97dcfcb28640.svg",
     "static/media/html-1.svg": "/Portfolio/static/media/html-1.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/javascript-1.svg": "/Portfolio/static/media/javascript-1.b879f838faf1cb951d1c2230fd933a39.svg",
-    "main.17df49eb.css.map": "/Portfolio/static/css/main.17df49eb.css.map",
-    "main.e4e8a5f6.js.map": "/Portfolio/static/js/main.e4e8a5f6.js.map"
+    "main.a7cbefba.css.map": "/Portfolio/static/css/main.a7cbefba.css.map",
+    "main.7503f90c.js.map": "/Portfolio/static/js/main.7503f90c.js.map"
   },
   "entrypoints": [
-    "static/css/main.17df49eb.css",
-    "static/js/main.e4e8a5f6.js"
+    "static/css/main.a7cbefba.css",
+    "static/js/main.7503f90c.js"
   ]
 }
