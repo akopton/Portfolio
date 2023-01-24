@@ -1,13 +1,27 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.96c06807.css",
-    "main.js": "/Portfolio/static/js/main.193e6701.js",
+    "main.css": "/Portfolio/static/css/main.4652df0e.css",
+    "main.js": "/Portfolio/static/js/main.e4e8a5f6.js",
     "static/media/my-photo.jpeg": "/Portfolio/static/media/my-photo.dda1f9881728affa2516.jpeg",
     "static/media/typing-cat.gif": "/Portfolio/static/media/typing-cat.a92d1fa9deb6345b159d.gif",
+    "static/media/expired-popup.png": "/Portfolio/static/media/expired-popup.6b9d018fbde58ffb9c5b.png",
+    "static/media/opened-task.png": "/Portfolio/static/media/opened-task.21f6db9b933f0292b8e4.png",
     "static/media/todo-list.png": "/Portfolio/static/media/todo-list.5a106263378ab5075fcb.png",
+    "static/media/main-site.png": "/Portfolio/static/media/main-site.2742a7216b36a842526a.png",
+    "static/media/filter-tasks.png": "/Portfolio/static/media/filter-tasks.dc5d5ec9833dccf49bf4.png",
+    "static/media/find-task.png": "/Portfolio/static/media/find-task.9dd616da2fb21047d84f.png",
+    "static/media/bills-manager.jpg": "/Portfolio/static/media/bills-manager.cce68d053362642791d4.jpg",
+    "static/media/logowanie.png": "/Portfolio/static/media/logowanie.9edc9bd86a64d5c8e492.png",
+    "static/media/new-task-form.png": "/Portfolio/static/media/new-task-form.09fea91bc5289af5f4e4.png",
+    "static/media/rejestracja-krok2.png": "/Portfolio/static/media/rejestracja-krok2.181d1cf715aa18d40989.png",
     "static/media/typescript-logo.png": "/Portfolio/static/media/typescript-logo.52ea0bc40ba11d507e7d.png",
+    "static/media/rejestracja-krok1.png": "/Portfolio/static/media/rejestracja-krok1.bdf97443d393056b8903.png",
     "static/media/contact-form.png": "/Portfolio/static/media/contact-form.5e82ebfe2ba36623b2d0.png",
+    "static/media/users-list.png": "/Portfolio/static/media/users-list.9db932928f7172b464fc.png",
+    "static/media/description-update.png": "/Portfolio/static/media/description-update.1d298e9c6fa8e3eb6667.png",
+    "static/media/pick-date.png": "/Portfolio/static/media/pick-date.1794eed8aae0cbe82cc5.png",
     "static/media/calculator.png": "/Portfolio/static/media/calculator.ef188a1117449968aefe.png",
+    "static/media/status-update.png": "/Portfolio/static/media/status-update.f2ceb9828e0efbcf1e63.png",
     "static/media/mongodb-logo.svg": "/Portfolio/static/media/mongodb-logo.fd82554bd307566edfca0c32271a894e.svg",
     "static/media/nodejs-logo.svg": "/Portfolio/static/media/nodejs-logo.2c61171f4ebbd09de1bee4c9563ac4e8.svg",
     "static/media/react-2.svg": "/Portfolio/static/media/react-2.e68b35f4774979ae220b1d5d7b345b00.svg",
@@ -16,11 +30,11 @@
     "static/media/css-3.svg": "/Portfolio/static/media/css-3.4e47c3122b8d2476a02f97dcfcb28640.svg",
     "static/media/html-1.svg": "/Portfolio/static/media/html-1.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/javascript-1.svg": "/Portfolio/static/media/javascript-1.b879f838faf1cb951d1c2230fd933a39.svg",
-    "main.96c06807.css.map": "/Portfolio/static/css/main.96c06807.css.map",
-    "main.193e6701.js.map": "/Portfolio/static/js/main.193e6701.js.map"
+    "main.4652df0e.css.map": "/Portfolio/static/css/main.4652df0e.css.map",
+    "main.e4e8a5f6.js.map": "/Portfolio/static/js/main.e4e8a5f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.96c06807.css",
-    "static/js/main.193e6701.js"
+    "static/css/main.4652df0e.css",
+    "static/js/main.e4e8a5f6.js"
   ]
 }
