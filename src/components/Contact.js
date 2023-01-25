@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import emailjs from 'emailjs-com';
 import emailjsValues from "../emailjs_values";
-import {FaLinkedin} from 'react-icons/fa';
-import {FaGithub} from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import CV from '../assets/docs/CV_Aleksander_Koptoń_EN.pdf'
 
-const Contact = () => {
-
+const Contact = ({ refs }) => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
@@ -27,7 +27,7 @@ const Contact = () => {
             emailjs.send(serviceId, templateId, templateParams, userId)
                 .then(response => console.log(response))
                 .then(error => console.log(error))
-                
+
             setName('')
             setEmail('')
             setMessage('')
@@ -38,14 +38,15 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact" className="contact__wrap">
+        <div className="contact-section section" ref={refs.contact}>
             <div className="contact__socials">
                 <h3>Contact me!</h3>
                 <p>Send me email or...</p>
                 <div className="icons">
-                    <a href="https://www.linkedin.com/in/aleksander-kopto%C5%84-657088201/" target='_blank'><FaLinkedin className="linkedin-icon icon"/></a>
-                    <a href="https://github.com/akopton" target='_blank'><FaGithub className="github-icon icon"/></a>
+                    <a href="https://www.linkedin.com/in/aleksander-kopto%C5%84-657088201/" target='_blank' className="linkedin-icon__wrap"><FaLinkedin className="linkedin-icon contact-icon" /></a>
+                    <a href="https://github.com/akopton" target='_blank'><FaGithub className="github-icon contact-icon" /></a>
                 </div>
+                <a href={CV} download='CV_Aleksander_Koptoń' className="download-btn" >Download CV</a>
             </div>
             <form className="contact__form">
                 <input
@@ -62,7 +63,7 @@ const Contact = () => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
-                <textarea 
+                <textarea
                     className="text-input --message"
                     type="text"
                     placeholder="Write your message..."
@@ -77,9 +78,9 @@ const Contact = () => {
                 />
                 <span className={emailSent ? 'visible' : 'hidden'}>Thank you for your message!<br></br> We will be in touch!</span>
             </form>
-            
-        </section>
+
+        </div>
     )
 }
 
-export default Contact;
+export default Contact

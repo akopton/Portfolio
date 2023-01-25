@@ -1,0 +1,78 @@
+.game-container {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .card-reveal-game {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: fit-content;
+        width: fit-content;
+
+        &__row {
+            display: flex;
+            gap: 10px;
+
+            .card {
+                height: 80px;
+                width: 80px;
+                border: 1px solid $primaryColor;
+                border-radius: 8px;
+                padding: 5px;
+                cursor: pointer;
+                
+                &__image {
+                    padding: 5px;
+                    border-radius: 8px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__winning-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            background: rgba(#2f2f2f, .5);
+            backdrop-filter: blur(8px);
+            
+            .win-alert {
+                text-align: center;
+                font-size: 26px;
+            }
+
+            .restart-button {
+                padding: 5px 20px;
+                font-size: 24px;
+                font-weight: bold;
+                background: none;
+                color: $primaryColor;
+                border: 2px solid $primaryColor;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover {
+                    color: $bgColor;
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+
+    
+}
+

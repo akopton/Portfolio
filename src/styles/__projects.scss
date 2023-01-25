@@ -1,0 +1,162 @@
+.projects-section {
+    .title {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+
+        .projects-list {
+            padding-top: 20px;
+            width: 100%;
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 100px;
+        }
+        
+        .main-project {
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__title {
+        font-size: 24px;
+        position: relative;
+
+        &:after {
+            content: '';
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background: $primaryColor;
+            transition: .3s ease;
+        }
+
+        &:hover {
+            &:after {
+                width: 100%;
+                transition: .3s ease;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        height: 200px;
+        width: 175px;
+        position: relative;
+
+        .project-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            animation: switchBack 1s ease;
+            cursor: pointer;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+
+            &.animated {
+                animation: switch 1s ease;
+            }
+        }
+
+        .project-tech {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            font-size: 20px;
+            background: rgba($bgColor, .3);
+            backdrop-filter: blur(6px);
+            animation: switchReverseBack 1s ease;
+            cursor: pointer;
+
+            &.animated {
+                animation: switchReverse 1s ease;
+            }
+        }
+    }
+}
+
+@keyframes switch {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -50%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes switchReverse {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes switchBack { 
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -50%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes switchReverseBack {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 50%;
+    }
+
+    100% {
+        top: 0;
+    }
+}

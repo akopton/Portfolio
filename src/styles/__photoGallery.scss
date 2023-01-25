@@ -1,0 +1,81 @@
+.photo-gallery {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .photo {
+        height: 500px;
+            width: 800px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .button {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        cursor: pointer;
+
+        &.left {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 20%;
+                right: 0;
+                height: 4px;
+                background: #2f2f2f;
+                width: 78%;
+                transform: rotate(-45deg);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 20%;
+                right: 0;
+                height: 4px;
+                background: #2f2f2f;
+                width: 78%;
+                transform: rotate(45deg);
+            }
+
+            &:hover {
+                &:before, &:after {
+                    background: $primaryColor;
+                }
+            }
+        }
+
+        &.right {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 20%;
+                left: 0;
+                height: 4px;
+                background: #2f2f2f;
+                width: 78%;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 20%;
+                left: 0;
+                height: 4px;
+                background: #2f2f2f;
+                width: 78%;
+                transform: rotate(-45deg);
+            }
+            
+            &:hover {
+                &:before, &:after {
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+}

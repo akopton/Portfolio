@@ -1,162 +1,81 @@
-.skills__wrap {
-    max-width: 100%;
-    text-align: center;
+.skills-section {
 
-    @media screen and (min-width: 360px) {
-        padding-left: 20px;
-        padding-right: 20px;
-        width: max-content;
-        margin: 0 auto;
-    }
-
-    .skills__carousel {
+    .top-row {
         display: flex;
-        width: 100%;
-        gap: 50px;
-        overflow: scroll;
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;
-
-        @media screen and (max-width: 499px) {
-            padding-left: calc(((100vw - 320px)/2) - 20px);
-            padding-right: calc(((100vw - 320px)/2) - 20px);
-        }
-
-        @media screen and (min-width: 1024px) {
-            gap: 30px;
-        }
-
-        .skills__card {
-            display: flex;
-            padding: 15px;
-            min-height: 350px;
-            min-width: 320px;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            position: relative;
-            z-index: 0;
-            cursor: default;
-
-            svg {
-                height: 300px;
-                width: 300px;
-                opacity: 1;
-                z-index: -1;
-                transition: opacity 1s ease;
-            }
-
-            &.--react {
-                
-                path,g {
-                    fill: #61dafb;
-                }
-            }
-
-            @media screen and (min-width: 1024px) {
-                p {
-                    opacity: 0;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                    transition: opacity 1s ease;
-                }
-    
-                &:hover {
-                    svg {
-                        opacity: 0.3;
-                        transition: opacity 1s ease;
-                    }
-                    p {
-                        opacity: 1;
-                        transition: opacity 1s ease;
-                    }
-                }
-            }
+        align-items: center;
+        
+        .game-description {
+            padding: 0px 10px 0px 10px;
+            line-height: 50px;
+            font-size: 24px;
         }
     }
 
-    .swipe {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    .bottom-row {
+        padding: 5px 20px 20px 20px;
 
-        @media screen and (min-width: 1400px) {
-            display: none;
-        }
-
-        .swipe__arrow {
-            display: flex;
-            align-items: center;
-            animation: arrow 1s infinite;
-
-            .arrow__body {
-                height: 4px;
-                width: 40px;
-                background-color: $primaryColor;
-                border-radius: 3px;
-            }
+        .rain {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
     
-            .arrow__head {
-                .head__part {
-                    height: 4px;
-                    width: 20px;
-                    background-color: $primaryColor;
-                    border-radius: 3px;
+            .raindrop {
+                width: 100%;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                animation: rainAnimation .4s;
     
-                    &.--top {
-                        transform: translateY(-2.5px) rotate(30deg);
+                &__image {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    img {
+                        height: 60px;
+                        width: 60px;
                     }
-        
-                    &.--bottom {
-                        transform: translateY(2.5px) rotate(-30deg);
+                }
+    
+                .dynamic-text__container {
+                    width: 80%;
+
+                    .text {
+                        font-size: 14px;
+                        line-height: 25px;
+    
+                        .cursor {
+                            font-size: 16px;
+                        }
                     }
                 }
             }
-        }
-        
-        .swipe__text {
-            margin-top: 10px;
-            text-align: right;
         }
     }
 }
 
-// Animations
-
-@keyframes arrow {
+@keyframes rainAnimation {
     0% {
-        transform: translateX(0);
-    }
-
-    20% { 
-        transform: translateX(1px);
-    }
-
-    40% { 
-        transform: translateX(2px);
-    }
-
-    60% { 
-        transform: translateX(3px);
-    }
-
-    80% { 
-        transform: translateX(2px);
-    }
-
-    100% { 
-        transform: translateX(1px);
-    }
-}
-
-@keyframes card {
-    from {
         opacity: 0;
     }
 
-    to {
+    100% {
         opacity: 1;
+    }
+}
+
+@keyframes pictureAnimation { 
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    100% {
+        height: 50px;
+        width: 50px; 
     }
 }

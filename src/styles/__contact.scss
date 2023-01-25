@@ -1,6 +1,7 @@
-.contact__wrap {
-    padding-left: 35px;
-    padding-right: 35px;
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .contact__form {
         display: flex;
@@ -16,12 +17,14 @@
             font-size: 20px;
             background: none;
             border: 1px solid $primaryColor;
+            border-radius: 8px;
             color: #fff;
         }
 
         textarea {
             height: 150px;
             width: 100%;
+            resize: none;
         }
 
         .submit-btn {
@@ -33,13 +36,28 @@
                 padding: 10px 15px;
                 font-size: 20px;
                 align-self: flex-end;
-
+                cursor: pointer;
             }            
         }
     }
 
     .contact__socials {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .download-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid $primaryColor;
+            transition: .3s ease;
+
+            &:hover {
+                transition: .3s ease;
+                border-radius: 20px;
+            }
+        }
 
         .icons {
             padding: 0 50px;
@@ -49,20 +67,26 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-    
-            .linkedin-icon {
-                transition: transform .3s ease;
-                &:hover {
+            
+            .linkedin-icon__wrap {
+                position: relative;
+
+                .linkedin-icon {
+                    transition: transform .3s ease;
+
+                    &:hover {
                         color: #0e76a8;
                         transform: scale(1.5);
                         transition: transform .3s ease;
+    
+                        
+                    }
                 }
             }
     
             .github-icon {
                 transition: transform .3s ease;
                 &:hover {
-                    color: #171515;
                     transform: scale(1.5);
                     transition: transform .3s ease;
                 }
@@ -76,6 +100,9 @@
         gap: 150px;
 
         .contact__socials {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             
             h3 {
@@ -86,7 +113,6 @@
                 font-size: 50px;
                 gap: 30px;
                 margin-top: 30px;
-
             }
         }
         

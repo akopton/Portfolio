@@ -1,75 +1,41 @@
-.experience__wrap {
-    max-width: 100%;
-    
-    @media screen and (min-width: 360px) {
-        padding-left: 35px;
-        padding-right: 35px;
+.experience-section {
+    padding: 20px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
+
+    &__title {
+        font-size: 35px;
     }
 
-    .experience {
-        &__main-text, &__aside-text {
-            text-align: center;
-            .desktop {
-                display: none;
-            }
-            
+    .subsection {
+        width: 450px;
+    
+        .items-wrapper {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
         }
 
-        &__aside-text {
-            margin-top: 20px;
+        &__title {
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-
-        @media screen and (min-width: 1024px) {
+    
+        &__item {
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            gap: 30px;
-            padding: 0 calc((100vw - 1500px)/2);
-            &__main-text {
-                text-align: right;
-                
-                .desktop {
-                    display: block;
-                    margin-top: 30px;
-                    color: $primaryColor;
-                    font-weight: 600;
-                    text-align: right;
-                }
-            }
-
-            &__aside-text {
-                text-align: left;
-                margin-top: 0;
-            }
-        }
-        .text-wrap {
-    
-            @media screen and (min-width: 660px) {
-                font-size: 22px;
-                width: 100%;
-            }
-
-            @media screen and (min-width: 1024px) {
-                min-height: 210px;
-            }
         }
     }
-    h3 {
-        text-align: center;
-        margin: 0 auto;
-        font-size: 22px;
-        color: $primaryColor;
-        
-        @media screen and (max-width: 1076px) {
-            margin-top: 20px;
-        }
-    }
+}
 
-    .mobile {
-        display: block;
-        
-        @media screen and (min-width: 1024px) {
-            display: none;
-        }
-    }
+.icon {
+    font-size: 32px;
+    margin-left: 15px;
+}
+
+.arrow {
+    margin-right: 10px;
 }

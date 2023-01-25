@@ -1,0 +1,56 @@
+.welcome-section {
+    display: flex;
+
+    &__photo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding-left: 100px;
+
+        .photo-title {
+
+            @media screen and (min-width: 1024px) {
+                font-size: 40px;
+            }
+        }
+        
+        .photo {
+            background-image: url('/src/assets/images/my-photo.jpeg');
+            height: 250px;
+            min-width: 250px;
+            background-size: 20rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            animation: movein 1s;
+            position: relative;
+            z-index: -1;
+            @media screen and (min-width: 1024px) {
+                height: 350px;
+                min-width: 350px;
+                background-size: 27rem;
+            }
+        }   
+    }
+
+    &__desc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 20px 20px 20px;
+
+        span {
+            font-size: 24px;
+        }
+    }
+}
+
+.cursor {
+    line-height: 100%;
+    height: 100%;
+}

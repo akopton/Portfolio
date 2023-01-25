@@ -1,3 +1,77 @@
+@import './_variables';
 .app {
-    margin: 0 auto;
+    position: relative;
+
+    .go-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: none;
+        border: 1px solid $primaryColor;
+        background: rgba($bgColor, .7);
+        backdrop-filter: blur(4px);
+        width: 40px;
+        height: 40px;
+        z-index: 9999;
+        color: $primaryColor;
+        font-size: 24px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+
+.build-in-progress {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    h1 {
+        @media screen and (max-width: 768px) {
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+
+    .gif {
+        background-image: url('/src/assets/images/typing-cat.gif');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 300px;
+        width: 300px;
+
+        @media screen and (min-width: 768px) {
+            height: 500px;
+            width: 500px;
+        }
+    }
+
+    .btn {
+        padding: 10px 15px;
+        background: none;
+        color: white;
+        font-size: 20px;
+        border: 2px solid white;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: .3s ease;
+
+        &:hover {
+            border-radius: 12px;
+            transition: .3s ease;
+        }
+    }
+
+    &.hide {
+        opacity: 0;
+        transition: 1s ease;
+    }
 }
